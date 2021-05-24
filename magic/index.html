@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Fortune Telling Crystal Ball</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    
+    <body>
+        <div id="box">
+            <img src="Images/crystal_ball.png">
+            <h2>The Crystal Ball Says...</h2>
+            <input id="user-input" type="input">
+            <input id="button" type="button" value="submit" onclick="response()">
+            <p id="response"></p>
+        </div>
+        <script>
+        function response() {
+            var list = [
+                "You will be a billionaire!",
+                "Watch for your health, more vitamins!",
+                "Love of your life is on the way!",
+                "Youl go to the Mars!",
+                "Nothing special...",
+            ];
+            var number = Math.floor(Math.random()*5);
+            document.getElementById("response").innerHTML = list[number];
+        }
+        </script>
+    </body>
+</html>
